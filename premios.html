@@ -9,10 +9,10 @@
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 
-<body>
-    <div id="navbar">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid" style="background-color:  #5cde47;">
+<body style="background-color:#ffffff;">
+    <div id="navbar" style="background-color: #5cde47 !important;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #5cde47 !important;">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="inicial.html">Recicla Ingá</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +32,9 @@
         </nav>
     </div>
 
-    <div style="padding: 10px 0; margin: 20px auto; max-width: 600px; text-align: center;">
-        <h1 style="text-align: center;">Premiações</h1>
-        <p style="margin: 5px;">
+    <div style="padding: 30px 0; margin: 5px; text-align: center;">
+        <h1 class="display-5 fw-bold mb-4">Premiações</h1>
+        <p class="lead" style="margin: 5px;">
             As premiações do Recicla Ingá funcionam com base em um sistema de pontos acumulados conforme o usuário
             realiza a reciclagem nas máquinas espalhadas pela cidade. Cada vez que a pessoa deposita uma garrafa,
             ela recebe uma determinada quantidade de pontos, que são creditados em sua conta no sistema. Esses
@@ -49,7 +49,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="assets/camiseta.png" class="card-img-top" alt="Camiseta">
                 <div class="card-body">
                     <h5 class="card-title">Camiseta</h5>
                     <p class="card-text">Camiseta logo Recicla Ingá (P|M|G|GG)</p> <br>
@@ -59,7 +59,7 @@
         </div>
         <div class="col">
             <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="assets/bone.png" class="card-img-top" alt="Boné">
                 <div class="card-body">
                     <h5 class="card-title">Boné</h5>
                     <p class="card-text">Boné logo Recicla Ingá</p> <br>
@@ -69,9 +69,9 @@
         </div>
         <div class="col">
             <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="assets/bolsa.png" class="card-img-top" alt="Bolsa Personalizada">
                 <div class="card-body">
-                    <h5 class="card-title">Bolsa Perosnalizada </h5>
+                    <h5 class="card-title">Bolsa Personalizada </h5>
                     <p class="card-text">Bolsa personalizada logo Recicla Ingá</p><br>
                     <p> RC POINTS 500</p>
                 </div>
@@ -79,42 +79,83 @@
         </div>
         <div class="col">
             <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="assets/bag.png" class="card-img-top" alt="Eco Bag personalizada">
                 <div class="card-body">
                     <h5 class="card-title">Eco Bag personalizada</h5>
-                    <p class="card-text">Ecobag Perosnalizada Recicla Ingá</p><br>
+                    <p class="card-text">Ecobag Personalizada Recicla Ingá</p><br>
                     <p> RC POINTS 350</p>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-    <div class="card" style="text-align: center; background-color: rgb(59, 55, 55);">
+    <div class="card mt-5 border-0" style="text-align: center; background-color: rgb(59, 55, 55);">
         <div class="card-body">
             <figure>
                 <blockquote class="blockquote">
-                    <p>Recicla Ingá </p>
+                    <p class="mb-0" style="color: #4cce13; font-size: 1.3rem;">Recicla Ingá</p>
                 </blockquote>
-                <figcaption class="blockquote-footer">
-                    AEP
-                    André Perin,
-                    Marcos Vinicius
+                    <img src="assets/unicesumar-logo-1.png" style="width: 100px; height: 50px; vertical-align: middle;">
+                    <p> </p>
+                    <p style="color: white;">🌱 Recicla Ingá
+                    Promovendo a consciência ambiental e a sustentabilidade em nossa comunidade.
+
+                    Desenvolvido por: André Perin e Marcos Vinicius
+                    © 2025 Recicla Ingá – Todos os direitos reservados.
+                    Entre em contato: [email@email.com] | Instagram: [@reciclainga]
+                    Feito com propósito, respeito ao meio ambiente e cidadania. ♻️
+                    </p>
                 </figcaption>
             </figure>
         </div>
     </div>
 
 
-
     <style>
-        p {
-            color: #4cce13;
+    body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
         }
-
-        h1 {
+        p, .card-text, .blockquote-footer {
             color: #4cce13;
+            text-align: center;
+        }
+        h1, .display-5 {
+            color: #4cce13;
+            text-align: center;
+        }
+        .card-title {
+            color: #388e3c;
+        }
+        .card {
+            background-color: #f8fff8;
+            min-height: 440px; /* aumente aqui para deixar os cards maiores */
+            height: 100%;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px 0 rgba(76, 206, 19, 0.08);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+        }
+        .card-img-top {
+            object-fit: contain;
+            height: 240px; /* aumente aqui para deixar a imagem maior */
+            background: #f8fff8;
+            padding: 10px;
+        }
+        .card-group {
+            justify-content: center;
+            gap: 10px;
+        }
+        .card.mt-5.border-0 {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .card-body p {
+            margin-top: 0.3rem;
+            margin-bottom: 0.3rem;
         }
     </style>
 
