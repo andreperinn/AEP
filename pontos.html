@@ -21,7 +21,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="pontos.html"
-                            style="color: #ffffff;">Pontos</a>
+                            style="color: #ffffff;">Pontos de Coleta</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="premios.html" style="color: #ffffff;">Prêmios</a>
@@ -42,6 +42,82 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+
+    <div id="map" style="height: 600px; width: 100%;"></div>
+    <script>
+      function initMap() {
+        const pontos = [
+          { lat: -23.4257, lng: -51.9329, title: "Park do Ingá" },
+          { lat: -23.4223, lng: -51.9328, title: "Shopping Maringa Park" },
+          { lat: -23.4129, lng: -51.9183, title: "Parque Alfredo Nyffeler" },
+          { lat: -23.4046, lng: -51.9393, title: "UEM" },
+          { lat: -23.4134, lng: -51.95595, title: "Shopping Mandacaru Boulevard" },
+          { lat: -23.4197, lng: -51.9703, title: "Shopping Catuai" },
+          { lat: -23.4154, lng: -51.9930, title: "Unifamma" },
+          { lat: -23.4036, lng: -51.9796, title: "Olimpico" },
+          { lat: -23.3998, lng: -51.9557, title: "Hospital Universitario" },
+          { lat: -23.3819, lng: -51.9401, title: "Parque das Bandeiras" },
+          { lat: -23.3947, lng: -51.9143, title: "Alvorada" },
+          { lat: -23.4056, lng: -51.9238, title: "Pedro Taques" },
+          { lat: -23.4150, lng: -51.9119, title: "Morangueira" },
+          { lat: -23.4134, lng: -51.9021, title: "Tuiuti" },
+          { lat: -23.4219, lng: -51.8936, title: "America" },
+          { lat: -23.4144, lng: -51.8858, title: "Liberdade" },
+          { lat: -23.4013, lng: -51.8956, title: "Oasis" },
+          { lat: -23.4015, lng: -51.8826, title: "Campos Eliseos" },
+          { lat: -23.4102, lng: -51.8738, title: "Requião" },
+          { lat: -23.4392, lng: -51.8964, title: "Bertioga" },
+          { lat: -23.4498, lng: -51.8997, title: "Porto Seguro" },
+          { lat: -23.4555, lng: -51.9114, title: "São Silvestre" },
+          { lat: -23.4653, lng: -51.9126, title: "Cidade Alta" },
+          { lat: -23.4681, lng: -51.9257, title: "Tarumã" },
+          { lat: -23.4519, lng: -51.9241, title: "UPA Zona Sul" },
+          { lat: -23.4427, lng: -51.9169, title: "Unicesumar" },
+          { lat: -23.4491, lng: -51.9435, title: "Italia" },
+          { lat: -23.4514, lng: -51.9599, title: "Borbagato" },
+          { lat: -23.4338, lng: -51.9589, title: "Zona 05" },
+          { lat: -23.4245, lng: -51.9605, title: "Zona 06" },
+          { lat: -23.4466, lng: -51.9758, title: "Parque do Japão" }
+        ];
+
+        // Centraliza o mapa em Maringá
+        const centro = { lat: -23.4273, lng: -51.9375 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 13,
+          center: centro
+        });
+
+        pontos.forEach(ponto => {
+          new google.maps.Marker({
+            position: { lat: ponto.lat, lng: ponto.lng },
+            map: map,
+            title: ponto.title
+          });
+        });
+      }
+    </script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_5LbC7DRn9JOos0mveyEvc_BfUS0Co_4&callback=initMap"></script>
+
+    <div class="card mt-5 border-0" style="text-align: center; background-color: rgb(59, 55, 55);">
+        <div class="card-body">
+            <figure>
+                <blockquote class="blockquote">
+                    <p class="mb-0" style="color: #4cce13; font-size: 1.3rem;">Recicla Ingá</p>
+                </blockquote>
+                <img src="assets/unicesumar-logo-1.png" style="width: 100px; height: 50px; vertical-align: middle;">
+                <p> </p>
+                <p style="color: white;">🌱 Recicla Ingá
+                    Promovendo a consciência ambiental e a sustentabilidade em nossa comunidade.
+
+                    Desenvolvido por: André Perin e Marcos Vinicius
+                    © 2025 Recicla Ingá – Todos os direitos reservados.
+                    Entre em contato: [email@email.com] | Instagram: [@reciclainga]
+                    Feito com propósito, respeito ao meio ambiente e cidadania. ♻️
+                </p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
 </body>
 
 </html>
